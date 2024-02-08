@@ -34,4 +34,8 @@ else
     FILESIZE=`du -hs "${WORKDOCS_DRIVE_DIR}/${TAR_FILENAME}" | cut -f1`
     echo
     echo " Tar file ${TAR_FILENAME} created, size =${FILESIZE}"
+    N_BACKUPS=`ls $WORKDOCS_DRIVE_DIR | grep kaleko-remarkable-backup | wc -l`
+    echo " Note there are ${N_BACKUPS} backups already existing. Consider clearing old ones from dir:"
+    echo $WORKDOCS_DRIVE_DIR
+    echo
 fi
